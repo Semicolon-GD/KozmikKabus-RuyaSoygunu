@@ -414,6 +414,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &957166512 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6187399019133959060, guid: 776030a285337934b9bbb0c8e4992ed9, type: 3}
+  m_PrefabInstance: {fileID: 3623228857767222643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &996530176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3945969966859807913, guid: 776030a285337934b9bbb0c8e4992ed9, type: 3}
@@ -431,7 +436,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a60b00577dd4f54280fedcfde0ae0e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  walkSpeed: 5
+  sprintSpeed: 8
+  sprinting: 0
   gravity: -9.8
   jumpHeight: 1.5
 --- !u!114 &996530178
@@ -446,6 +453,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6695de63b0aa5104e9d6be6cebcdc56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &996530183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996530176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e4bc308f682814794060d9b8987634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 957166512}
+  xSens: 40
+  ySens: 40
 --- !u!1 &1177512802
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +656,7 @@ Transform:
   m_GameObject: {fileID: 1543929106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.0199938, y: -17.12758, z: -13.405796}
-  m_LocalScale: {x: 20, y: 1, z: 20}
+  m_LocalScale: {x: 40, y: 1, z: 40}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

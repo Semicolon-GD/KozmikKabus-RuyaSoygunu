@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
+
 public class InputManager : MonoBehaviour
 {
     private PlayerInput playerInput;
@@ -15,7 +17,12 @@ public class InputManager : MonoBehaviour
         playerMotor=GetComponent<PlayerMotor>();
         playerLook=GetComponent<PlayerLook>();
         onFoot.Jump.performed += ctx => playerMotor.Jump();
+        OnEnable();
+        onFoot.Sprint.performed += ctx => playerMotor.SprintPressed();
+        onFoot.Sprint.canceled += ctx => playerMotor.SprintReleased();
     }
+
+    
 
     private void FixedUpdate()
     {
