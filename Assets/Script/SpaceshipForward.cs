@@ -16,5 +16,8 @@ public class SpaceshipForward : MonoBehaviour
 
         // Gemiyi bu vektördeki hýzda sürekli olarak ilerletin.
         rb.velocity = ilerlemeVektoru;
+
+
+       
     }
 }
