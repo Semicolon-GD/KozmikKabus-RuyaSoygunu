@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class SpaceshipForward : MonoBehaviour
 {
-    [SerializeField] private float hiz = 3.0f; // Geminin hýzýný ayarlayýn.
+    public float moveSpeed = 2.0f; // Hareket hýzý
 
     private Rigidbody rb;
 
-    void Start()
+    private void Start()
     {
+        // Rigidbody bileþenini al
         rb = GetComponent<Rigidbody>();
-        // Ýlerleme vektörünü hesaplayýn (örneðin, X ekseninde düz ilerleme).
-        Vector3 ilerlemeVektoru = Vector3.right * hiz;
+    }
+
+    private void Update()
+    {
+        // X ekseninde ilerleme vektörünü oluþtur
+        Vector3 ilerlemeVektoru = -Vector3.right * moveSpeed;
 
         // Gemiyi bu vektördeki hýzda sürekli olarak ilerletin.
         rb.velocity = ilerlemeVektoru;
-
-
-       
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6249769965586791881}
   - component: {fileID: 4718137479247560241}
   - component: {fileID: 4718137479247560237}
+  - component: {fileID: 527133507410229914}
   m_Layer: 0
   m_Name: Rock_04
   m_TagString: Untagged
@@ -116,3 +117,16 @@ MonoBehaviour:
   blackHole: {fileID: 0}
   meteorSpeed: 5
   destructionDistance: 1
+--- !u!135 &527133507410229914
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5601168263214734364}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.008152333
+  m_Center: {x: 0.0010245673, y: -0.0008168101, z: -0.0018762642}

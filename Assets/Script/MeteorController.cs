@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class MeteorController : MonoBehaviour
 {
@@ -24,10 +26,30 @@ public class MeteorController : MonoBehaviour
 
         // Meteorlarýn kara deliðe ne kadar yakýn olduðunu kontrol etme
         float distanceToBlackHole = directionToBlackHole.magnitude;
+
         if (distanceToBlackHole < destructionDistance)
         {
             // Meteor, kara deliðe girdiðinde yok etme iþlemi
             Destroy(gameObject); // veya gameObject.SetActive(false); kullanarak devre dýþý býrakabilirsiniz
         }
     }
+
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Ýki nesne çarpýþtýðýnda bu kod çalýþýr.
+
+        // Çarpýþma kontrolü için çarpýþma nesnelerini etiket veya baþka bir özellikle kontrol edebilirsiniz.
+        if (collision.gameObject.CompareTag("StarShip") && collision.gameObject.CompareTag("BlackHole"))
+        {
+            // Sahneyi deðiþtir
+            SceneManager.LoadScene("SecondScene");
+        }
+
+        
+    }
+
+
+
 }
