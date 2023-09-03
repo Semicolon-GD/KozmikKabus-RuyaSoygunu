@@ -83,7 +83,7 @@ public class MeteorSpawner : MonoBehaviour
 
         return randomPosition;
     }
-
+    
 
 }
 

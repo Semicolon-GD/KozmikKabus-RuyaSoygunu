@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class MeteorVisibility : MonoBehaviour
 {
-   
+    private void Update()
+    {
+       
+    }
 }

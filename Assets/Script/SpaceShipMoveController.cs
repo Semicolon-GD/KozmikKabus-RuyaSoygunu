@@ -7,21 +7,19 @@ public class SpaceShipMoveController : MonoBehaviour
     //Bu kod yukarý aþagý sag sol için
 
     [SerializeField] private float hareketHizi = 5.0f;
-
+    private Rigidbody rb;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
     void Update()
     {
-        float tusGecisi = Input.GetAxis("Horizontal");//x
-        transform.Translate(tusGecisi * Time.deltaTime * hareketHizi, 0, 0);
-
-        float tusGecisi1 = Input.GetAxis("Vertical");//y
-        transform.Translate(0, tusGecisi1 * Time.deltaTime * hareketHizi, 0);
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        Vector3 movement = new Vector3(horizontalInput, verticalInput,0 ) * hareketHizi * Time.deltaTime;
+        rb.AddForce (movement);
+        
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Meteor")
-        {
-            Destroy(collision.gameObject);
-        }
-    }
+    
 }
