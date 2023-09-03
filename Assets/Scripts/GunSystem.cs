@@ -22,8 +22,7 @@ public class GunSystem : MonoBehaviour
 
     //Graphics
     public GameObject muzzleFlash, bulletHoleGraphic;
-    //public CamShake camShake;
-    //public float camShakeMagnitude, camShakeDuration;
+    
     public TextMeshProUGUI text;
 
     private void Awake()
@@ -72,10 +71,7 @@ public class GunSystem : MonoBehaviour
             // rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage);
         }
 
-        //ShakeCamera
-        //camShake.Shake(camShakeDuration, camShakeMagnitude);
-
-        //Graphics
+        
         Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
         Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
 

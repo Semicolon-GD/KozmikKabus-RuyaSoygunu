@@ -669,7 +669,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060021823}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af3bb5bbb7eeede4592e166d86842b1a, type: 3}
   m_Name: 
@@ -691,6 +691,30 @@ MonoBehaviour:
   muzzleFlash: {fileID: 1743301284569550, guid: ad2ab49d0a2a17148bd51c93d977bdbc, type: 3}
   bulletHoleGraphic: {fileID: 1341869769842038, guid: 8b7a1ffda5bb7474b8fae646c45ce7b4, type: 3}
   text: {fileID: 1766627861}
+--- !u!114 &1060021826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060021823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d7037972ed2494babceeff82b41cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7420773908205719672, guid: 32977607eed82034eb7abcf41e303a67, type: 3}
+  firePoint: {fileID: 1404493932}
+  magazineSize: 10
+  startingAmmo: 50
+  bulletSpeed: 200
+  fireRate: 0.2
+  recoilForce: 10
+  playerCamera: {fileID: 957166512}
+  isZoomed: 0
+  zoomFOV: 30
+  normalFOV: 60
+  damagePerShot: 10
 --- !u!1 &1177512802
 GameObject:
   m_ObjectHideFlags: 0
