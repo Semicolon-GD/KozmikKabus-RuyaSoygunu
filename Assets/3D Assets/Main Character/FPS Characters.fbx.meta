@@ -3,7 +3,12 @@ guid: 116ee730902c53345841520d838973b8
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boyaci
+    second: {fileID: 2100000, guid: 0d0eaac9b96db44489e7fc648caca329, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
