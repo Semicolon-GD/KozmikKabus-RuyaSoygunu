@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/CreditsScene.unity.meta
 guid: 140cc1dae5c03b84298a2db66b11d77a
+========
+guid: bec9becadf01912489774f2541e9d676
+>>>>>>>> origin/ali_design:Assets/Scenes/Dream1.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
