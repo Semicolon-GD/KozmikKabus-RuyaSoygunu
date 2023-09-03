@@ -1,12 +1,13 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SahneSayaci : MonoBehaviour
+public class finishScript : MonoBehaviour
 {
-   
+    
 
-    private float delayInSeconds = 7f; // Sahne deðiþikliði gecikme süresi
+    private float delayInSeconds = 30f; // Sahne deðiþikliði gecikme süresi
 
     private void Start()
     {
@@ -20,6 +21,6 @@ public class SahneSayaci : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(delayInSeconds);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 }
