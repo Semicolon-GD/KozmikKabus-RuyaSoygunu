@@ -1,11 +1,15 @@
 using UnityEngine;
-
-public class AdvancedWeaponController : MonoBehaviour
+using TMPro;
+public class WeaponController : MonoBehaviour
 {
+    
+    public TMP_Text text;    
     public GameObject bulletPrefab; // Mermi prefab'ý
+    public bool isReload=false; //Þarjör deðiþtiriyo mu
     public Transform firePoint; // Mermi atýþ noktasý
     public int magazineSize = 10; // Þarjör boyutu
-    public int startingAmmo = 50; // Baþlangýç mermi sayýsý
+    public float startingAmmo = Mathf.Infinity; // Baþlangýç mermi sayýsý
+    public float reloadTime =0.5f;// Þarjör deðiþtirme süresi
     public float bulletSpeed = 10.0f; // Mermi hýzý
     public float fireRate = 0.2f; // Ateþ hýzý (saniyede mermi)
     public float recoilForce = 1.0f; // Geri tepme gücü
@@ -20,11 +24,14 @@ public class AdvancedWeaponController : MonoBehaviour
 
     private void Start()
     {
+        //m_AmmoUI=GetComponent<AmmoUI>();
         currentAmmo = magazineSize;
     }
 
     private void Update()
     {
+        
+        text.SetText("Mermi:"+currentAmmo);
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             ToggleZoom();
@@ -53,6 +60,7 @@ public class AdvancedWeaponController : MonoBehaviour
     private void Shoot()
     {
         currentAmmo--;
+       
         nextFireTime = Time.time + 1.0f / fireRate;
 
         // Mermi prefab'ýný firePoint pozisyonunda ve rotasyonunda oluþturun
@@ -72,16 +80,25 @@ public class AdvancedWeaponController : MonoBehaviour
         // Geri tepme efekti
         playerCamera.transform.localRotation *= Quaternion.Euler(Vector3.left * recoilForce);
 
-        // Mermiyi bir süre sonra yok edin (isteðe baðlý)
-        Destroy(bullet, 3.0f);
+        Destroy(bullet, 1.2f);
+        
     }
 
+    //private void Reload()
+    //{
+    //    int bulletsToReload = magazineSize - currentAmmo;
+    //    int bulletsAvailable = Mathf.Min(startingAmmo, bulletsToReload);
+    //    currentAmmo += bulletsAvailable;
+    //    startingAmmo -= bulletsAvailable;
+    //}
     private void Reload()
     {
-        int bulletsToReload = magazineSize - currentAmmo;
-        int bulletsAvailable = Mathf.Min(startingAmmo, bulletsToReload);
-        currentAmmo += bulletsAvailable;
-        startingAmmo -= bulletsAvailable;
+        isReload = true;
+        Invoke("FinishReload", reloadTime);
+    }private void FinishReload()
+    {
+        currentAmmo = magazineSize;
+        isReload = false;
     }
 
     private void ToggleZoom()

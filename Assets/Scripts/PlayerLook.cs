@@ -21,14 +21,4 @@ public class PlayerLook : MonoBehaviour
         cam.transform.localRotation = Quaternion.Euler(xRot, 0f, 0f);
         transform.Rotate(Vector3.up*(mouseX*Time.deltaTime)*xSens);
     }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -21,8 +21,7 @@ public class BulletController : MonoBehaviour
             //    enemyHealth.TakeDamage(damage);
             //}
         }
-
-        // Mermiyi yok edin
+        // Mermiyi yok et
         Destroy(gameObject);
     }
 }
