@@ -29,7 +29,7 @@ public class WeaponController : MonoBehaviour
     {
         //m_AmmoUI=GetComponent<AmmoUI>();
         currentAmmo = magazineSize;
-        WeaponSelected();
+        
     }
 
     private void Update()
