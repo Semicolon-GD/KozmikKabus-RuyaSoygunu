@@ -19,6 +19,9 @@ public class WeaponController : MonoBehaviour
     public float normalFOV = 60.0f; // Normal görüþ alaný
     public int damagePerShot = 10; // Mermi baþýna verilecek hasar
 
+    public int selectedWeapon=0;
+
+
     private int currentAmmo; // Þu anki mermi sayýsý
     private float nextFireTime = 0.0f; // Bir sonraki ateþ zamaný
 
@@ -26,6 +29,7 @@ public class WeaponController : MonoBehaviour
     {
         //m_AmmoUI=GetComponent<AmmoUI>();
         currentAmmo = magazineSize;
+        WeaponSelected();
     }
 
     private void Update()
@@ -105,4 +109,5 @@ public class WeaponController : MonoBehaviour
     {
         isZoomed = !isZoomed;
     }
+    
 }
