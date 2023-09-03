@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/GameOverScene.unity.meta
 guid: 935a32fb6726b494b9cad8507c9ca3ee
+========
+guid: bec9becadf01912489774f2541e9d676
+>>>>>>>> main:Assets/Scenes/FPSScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
