@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: ac6b5f3c45f4dc847866aab6a2cab711
+guid: 0d63c99873282a840840374b155d5d33
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Jacket
-    second: {fileID: 2100000, guid: fd98899b18d28094480805a13ed548b0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "Sh\u015Frt"
-    second: {fileID: 2100000, guid: 134bdc501f3eaf0428ae76ad22a37944, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Skin
-    second: {fileID: 2100000, guid: e1764194b7e2b704599d374c208e3523, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
