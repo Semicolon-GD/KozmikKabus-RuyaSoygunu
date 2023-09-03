@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AnimScene.unity
     guid: 736513f616b447144a32145af6558ed2
+  - enabled: 1
+    path: Assets/Scenes/Dream123.unity
+    guid: 25761acc3873dd04a8888f1a679c366c
   m_configObjects: {}

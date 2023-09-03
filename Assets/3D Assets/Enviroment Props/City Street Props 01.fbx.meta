@@ -3,7 +3,32 @@ guid: 98fdb6b6025929142871a82af5832f0b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car Textures2
+    second: {fileID: 2100000, guid: 8f8fe4d7b377bf649b3f7c1aa2999b09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car textures
+    second: {fileID: 2100000, guid: 9cccaea1bdf1279478b5ada50a0c28e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Enviroemnt
+    second: {fileID: 2100000, guid: 81cc2d6906e3dfc4e90fc464884fd851, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "G\xF6vde"
+    second: {fileID: 2100000, guid: b92f7e1fb79893e4da03600352a9f35e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Ye\u015Fillik"
+    second: {fileID: 2100000, guid: ea5637ec02989d04e96f3b407edfe7b7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
