@@ -7,7 +7,7 @@ public class WeaponSelected : MonoBehaviour
     private int selectedWeapon;
     void Start()
     {
-        
+        WeaponSelect();
     }
     private void WeaponSelect()
     {
@@ -28,6 +28,26 @@ public class WeaponSelected : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (selectedWeapon>=transform.childCount-1)
+            {
+                selectedWeapon=0;
+            }
+            else
+            {
+                selectedWeapon++;
+            }
+        }if (Input.GetKeyDown(KeyCode.E)) 
+        {
+            if (selectedWeapon <= 0)
+            {
+                selectedWeapon = transform.childCount-1;
+            }
+            else
+            {
+                selectedWeapon--;
+            }
+        }
     }
 }
